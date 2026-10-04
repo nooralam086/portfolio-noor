@@ -1,0 +1,257 @@
+/* =========================
+   PROJECTS SECTION
+========================= */
+
+.projects {
+  padding: 100px 8%;
+  background: #ffffff;
+}
+
+.projects-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* =========================
+   HEADING
+========================= */
+
+.projects-heading {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.projects-heading p {
+  color: #6366f1;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+}
+
+.projects-heading h2 {
+  position: relative;
+  display: inline-block;
+
+  margin: 0;
+  font-size: 42px;
+  color: #111827;
+}
+
+.projects-heading h2::after {
+  content: "";
+
+  position: absolute;
+
+  width: 45px;
+  height: 4px;
+
+  left: 50%;
+  bottom: -12px;
+
+  transform: translateX(-50%);
+
+  background: #6366f1;
+  border-radius: 10px;
+}
+
+/* =========================
+   PROJECT GRID
+========================= */
+
+.projects-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 28px;
+}
+
+/* =========================
+   PROJECT CARD
+========================= */
+
+.project-card {
+  position: relative;
+
+  padding: 30px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* Top line */
+
+.project-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 0;
+  height: 4px;
+
+  background: #6366f1;
+
+  transition: width 0.35s ease;
+}
+
+/* Hover */
+
+.project-card:hover {
+  transform: translateY(-8px);
+
+  border-color: #c7d2fe;
+
+  box-shadow:
+    0 18px 35px rgba(0, 0, 0, 0.09);
+}
+
+.project-card:hover::before {
+  width: 100%;
+}
+
+/* =========================
+   PROJECT TITLE
+========================= */
+
+.project-card h3 {
+  margin: 0 0 14px;
+
+  font-size: 24px;
+  color: #111827;
+
+  transition: color 0.3s ease;
+}
+
+.project-card:hover h3 {
+  color: #6366f1;
+}
+
+/* =========================
+   PROJECT DESCRIPTION
+========================= */
+
+.project-card p {
+  margin: 0 0 22px;
+
+  color: #6b7280;
+
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* =========================
+   TECHNOLOGIES
+========================= */
+
+.project-tech {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-bottom: 25px;
+}
+
+.project-tech span {
+  padding: 6px 12px;
+
+  background: #eef2ff;
+
+  color: #4f46e5;
+
+  border-radius: 20px;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* =========================
+   VIEW PROJECT BUTTON
+========================= */
+
+.project-link {
+  display: inline-block;
+
+  padding: 10px 18px;
+
+  background: #6366f1;
+
+  color: white;
+
+  text-decoration: none;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.project-link:hover {
+  background: #4f46e5;
+
+  transform: translateY(-2px);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 800px) {
+
+  .projects {
+    padding: 80px 5%;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .projects {
+    padding: 70px 20px;
+  }
+
+  .projects-heading {
+    margin-bottom: 45px;
+  }
+
+  .projects-heading h2 {
+    font-size: 34px;
+  }
+
+  .project-card {
+    padding: 24px;
+  }
+
+  .project-card h3 {
+    font-size: 21px;
+  }
+
+  .project-card p {
+    font-size: 15px;
+  }
+}
