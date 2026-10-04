@@ -1,30 +1,58 @@
 import "./Home.css";
+
 function Home() {
   return (
     <section id="home" className="home">
-      <div className="home-content">
 
-        <p className="intro">Hello, I'm</p>
+      <div className="home-inner">
 
-        <h1>Noor Alam</h1>
+        {/* LEFT SIDE */}
+        <div className="home-content">
 
-        <h2>BCA Student & MERN Stack Developer</h2>
+          <p className="intro">
+            Hello, I'm
+          </p>
 
-        <p className="home-description">
-          I enjoy turning ideas into functional and user-friendly web
-          experiences. I love learning new technologies and building
-          real-world projects.
-        </p>
+          <h1>
+            Noor Alam
+          </h1>
 
-        <div className="home-buttons">
-          <a href="#projects">View Projects</a>
-          <a href="#contact">Contact Me</a>
+          <h2>
+            BCA Student & MERN Stack Developer
+          </h2>
+
+          <p className="home-description">
+            I enjoy turning ideas into functional and user-friendly web
+            experiences. I love learning new technologies and building
+            real-world projects.
+          </p>
+
+          <div className="home-buttons">
+
+            <a href="#projects">
+              View Projects
+            </a>
+
+            <a href="#contact">
+              Contact Me
+            </a>
+
+          </div>
+
         </div>
+
+        {/* RIGHT SIDE PHOTO */}
         <div className="home-photo">
-          <img src="alamnoor.jpeg" alt="Noor Alam" width={200} height={400}/>
+
+          <img
+            src="/alamnoor.jpeg"
+            alt="Noor Alam"
+          />
+
         </div>
 
       </div>
+
     </section>
   );
 }
